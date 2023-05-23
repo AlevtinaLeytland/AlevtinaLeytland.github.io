@@ -13,25 +13,21 @@ export async function getNewsBySelect(country, category) {
     `${baseUrlNews}top-headlines?country=${country}&category=${category}`,
 
     {
-      method: "GET",
-      mode: "no-cors",
       headers: {
         "X-Api-Key": newsKey,
-        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
     },
   );
-  return await JSON.parse(data);
+  return await data.json();
 }
 
 export async function getNewsBySearch(text) {
   const data = await fetch(`${baseUrlNews}everything?q=${text}`, {
-    method: "GET",
-    mode: "no-cors",
     headers: {
       "X-Api-Key": newsKey,
-      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
     },
   });
-  return await JSON.parse(data);
+  return await data.json();
 }
