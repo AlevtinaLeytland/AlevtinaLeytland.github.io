@@ -13,8 +13,12 @@ export async function getNewsBySelect(country, category) {
     `${baseUrlNews}top-headlines?country=${country}&category=${category}`,
 
     {
-      mode: "cors",
-      headers: { "X-Api-Key": newsKey },
+      method: "GET",
+      mode: "no-cors",
+      headers: {
+        "X-Api-Key": newsKey,
+        "Content-Type": "application/json",
+      },
     },
   );
   return await data.json();
@@ -22,8 +26,12 @@ export async function getNewsBySelect(country, category) {
 
 export async function getNewsBySearch(text) {
   const data = await fetch(`${baseUrlNews}everything?q=${text}`, {
-    mode: "cors",
-    headers: { "X-Api-Key": newsKey },
+    method: "GET",
+    mode: "no-cors",
+    headers: {
+      "X-Api-Key": newsKey,
+      "Content-Type": "application/json",
+    },
   });
   return await data.json();
 }
