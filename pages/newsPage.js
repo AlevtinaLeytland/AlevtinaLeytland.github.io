@@ -65,11 +65,15 @@ export async function renderNewsBySelect(newsList) {
 export async function showDefaultNews(newsList) {
   const selectCountryElem = document.querySelector(".country");
   const selectCategoryItem = document.querySelector(".categories");
-
-  const news = await getNewsBySelect(
-    selectCountryElem.value,
-    selectCategoryItem.value,
-  );
-  newsList.innerHTML = "";
-  createNewsList(news, newsList);
+  try {
+    const news = await getNewsBySelect(
+      selectCountryElem.value,
+      selectCategoryItem.value,
+    );
+    newsList.innerHTML = "";
+    createNewsList(news, newsList);
+  } catch (error) {
+    console.log(error);
+    errorHandler(error, newsList);
+  }
 }
