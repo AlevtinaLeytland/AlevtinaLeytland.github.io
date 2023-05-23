@@ -17,10 +17,11 @@ export async function getNewsBySelect(country, category) {
       mode: "no-cors",
       headers: {
         "X-Api-Key": newsKey,
+        "Content-Type": "application/json",
       },
     },
   );
-  return await data.json();
+  return await JSON.parse(data);
 }
 
 export async function getNewsBySearch(text) {
@@ -29,7 +30,8 @@ export async function getNewsBySearch(text) {
     mode: "no-cors",
     headers: {
       "X-Api-Key": newsKey,
+      "Content-Type": "application/json",
     },
   });
-  return await data.json();
+  return await JSON.parse(data);
 }
