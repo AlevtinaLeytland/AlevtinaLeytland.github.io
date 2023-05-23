@@ -6,28 +6,18 @@ export async function getRandomQuote() {
   const data = await fetch(`${quoteUrl}/random`);
   return await data.json();
 }
-const baseUrlNews = "https://newsapi.org/v2/";
+const baseUrlNews = `https://newsapi.org/v2/`;
 
 export async function getNewsBySelect(country, category) {
   const data = await fetch(
-    `${baseUrlNews}top-headlines?country=${country}&category=${category}`,
-
-    {
-      headers: {
-        "X-Api-Key": newsKey,
-        "Access-Control-Allow-Origin": "*",
-      },
-    },
+    `${baseUrlNews}top-headlines?country=${country}&category=${category}&apiKey=${newsKey}`,
   );
   return await data.json();
 }
 
 export async function getNewsBySearch(text) {
-  const data = await fetch(`${baseUrlNews}everything?q=${text}`, {
-    headers: {
-      "X-Api-Key": newsKey,
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
+  const data = await fetch(
+    `${baseUrlNews}everything?q=${text}&apiKey=${newsKey}`,
+  );
   return await data.json();
 }
