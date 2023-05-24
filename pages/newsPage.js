@@ -7,7 +7,7 @@ import {
 import { createNewsList } from "../components/template.js";
 import { countriesValue, countriesLabel, categories } from "../lib/data.js";
 
-//--------------Functions for news search by keyword------------------------------------
+//Function for news search by keyword
 export function searchByKey(newsList) {
   const searchNews = document.querySelector(".searchNews");
   searchNews.addEventListener("submit", submitHandler);
@@ -18,6 +18,7 @@ export function searchByKey(newsList) {
     renderNewsBySearch(searchInputValue, newsList);
   }
 }
+
 async function renderNewsBySearch(searchInputValue, newsList) {
   try {
     const news = await getNewsBySearch(searchInputValue); //server error
@@ -32,7 +33,7 @@ async function renderNewsBySearch(searchInputValue, newsList) {
     errorHandler(error, newsList);
   }
 }
-//--------------Function for news search by category or/and country-------------------
+
 export async function renderNewsBySelect(newsList) {
   const selectElem = document.querySelector(".country");
   const selectCategoryItem = document.querySelector(".categories");
@@ -54,20 +55,19 @@ export async function renderNewsBySelect(newsList) {
       errorHandler(error, newsList);
     }
   });
+
   selectCategoryItem.addEventListener("change", async (event) => {
     const news = await getNewsBySelect(selectElem.value, event.target.value);
     newsList.innerHTML = "";
     createNewsList(news, newsList);
   });
 }
-
-//---------------Default news function-----------------------------------------------
 export async function showDefaultNews(newsList) {
-  const selectCountryElem = document.querySelector(".country");
+  const selectElem = document.querySelector(".country");
   const selectCategoryItem = document.querySelector(".categories");
   try {
     const news = await getNewsBySelect(
-      selectCountryElem.value,
+      selectElem.value, //забираємо те що на даний момент обрано
       selectCategoryItem.value,
     );
     newsList.innerHTML = "";
