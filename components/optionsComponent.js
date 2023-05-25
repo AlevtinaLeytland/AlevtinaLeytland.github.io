@@ -1,3 +1,4 @@
+//creating select options for categories and countries in sidebar
 export function createCategoryOptions(categories) {
   return categories.map((item) => {
     const categoryOption = document.createElement("option");
