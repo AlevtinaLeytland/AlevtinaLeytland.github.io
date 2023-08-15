@@ -1,0 +1,15 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar input {
+  height: 2em;
+  border: 1px solid #4f3505;
+  border-radius: 5px;
+  font-size: medium;
+}
+h2 {
+  color: #4f3505;
+}

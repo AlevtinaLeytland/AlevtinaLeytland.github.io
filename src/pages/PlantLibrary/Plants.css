@@ -1,0 +1,6 @@
+.plants-container {
+  display: grid;
+  grid: auto auto;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+}

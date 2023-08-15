@@ -1,0 +1,66 @@
+.banner-img {
+  width: 100%;
+}
+.header-container {
+  position: relative;
+}
+.quote {
+  position: absolute;
+  color: antiquewhite;
+  font-size: calc(18px + 14 * (100vw / 1280));
+  padding: 5% 45% 5% 2%;
+  line-height: calc(32px + 16 * (100vw / 1280));
+}
+.quote-author {
+  font-size: calc(14px + 10 * (100vw / 1280));
+  margin-left: 80%;
+}
+.nav-menu {
+  display: flex;
+  position: absolute;
+  font-size: calc(14px + 10 * (100vw / 1280));
+  bottom: -2em;
+  left: 2%;
+}
+.nav-menu li {
+  list-style-type: none;
+  color: antiquewhite;
+  padding-right: 1em;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+.nav-menu a:hover {
+  color: white;
+  font-size: calc(16px + 10 * (100vw / 1280));
+}
+.nav-menu li span:hover {
+  color: white;
+  font-size: calc(16px + 10 * (100vw / 1280));
+}
+.permaculture-list {
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 0.3s;
+}
+.permaculture-list.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  border-radius: 20px;
+  background-color: #d7a13f;
+  text-align: center;
+  padding-left: 1em;
+}
+.permaculture-list li {
+}
+@media (max-width: 992px) {
+  .quote {
+    line-height: normal;
+  }
+  .quote-author {
+    margin-left: 65%;
+  }
+}

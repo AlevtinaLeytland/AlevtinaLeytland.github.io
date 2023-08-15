@@ -1,0 +1,13 @@
+.aboutUs-container {
+  margin: 2% 10%;
+  font-size: calc(12px + 8 * (100vw / 1280));
+  text-align: justify;
+}
+.aboutUs-container h1 {
+  margin: 0 auto;
+  text-align: center;
+  color: #4f3505;
+}
+.aboutUs-list {
+  margin-left: 5%;
+}
