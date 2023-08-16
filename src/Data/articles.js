@@ -1,4 +1,7 @@
 import permaculture from "../Assets/permaculture.jpg";
+import farm from "../Assets/farm.jpg";
+import health from "../Assets/health.jpg";
+import solar from "../Assets/solar.jpg";
 
 export default [
   {
@@ -10,16 +13,14 @@ export default [
   },
   {
     id: 2,
-    imageSrc:
-      "https://cdn.pixabay.com/photo/2017/01/16/19/54/ireland-1985088_960_720.jpg",
+    imageSrc: farm,
     title: "Farm",
     articleText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis. Ipsum a arcu cursus vitae congue mauris. Natoque penatibus et magnis dis parturient montes nascetur. Habitant morbi tristique senectus et netus et malesuada fames. Bibendum enim facilisis gravida neque convallis a cras semper. Amet est placerat in egestas erat imperdiet sed euismod. Id porta nibh venenatis cras sed felis eget velit aliquet. Volutpat sed cras ornare arcu dui. Sit amet nisl purus in mollis. Pharetra vel turpis nunc eget lorem dolor sed. Eget arcu dictum varius duis at consectetur. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. ",
   },
   {
     id: 3,
-    imageSrc:
-      "https://cdn.pixabay.com/photo/2015/07/08/10/42/solar-835894_960_720.jpg",
+    imageSrc: solar,
     title: "Technologies",
     items: [
       {
@@ -45,8 +46,7 @@ export default [
   },
   {
     id: 4,
-    imageSrc:
-      "https://cdn.pixabay.com/photo/2015/09/24/15/29/wellness-955796_960_720.jpg",
+    imageSrc: health,
     title: "Health",
     articleText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis. Ipsum a arcu cursus vitae congue mauris. Natoque penatibus et magnis dis parturient montes nascetur. Habitant morbi tristique senectus et netus et malesuada fames. Bibendum enim facilisis gravida neque convallis a cras semper. Amet est placerat in egestas erat imperdiet sed euismod. Id porta nibh venenatis cras sed felis eget velit aliquet. Volutpat sed cras ornare arcu dui. Sit amet nisl purus in mollis. Pharetra vel turpis nunc eget lorem dolor sed. Eget arcu dictum varius duis at consectetur. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. ",

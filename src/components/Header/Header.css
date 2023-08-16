@@ -58,9 +58,14 @@
 }
 @media (max-width: 992px) {
   .quote {
-    line-height: normal;
+    line-height: 1em;
   }
   .quote-author {
     margin-left: 65%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .quote {
+    display: none;
   }
 }

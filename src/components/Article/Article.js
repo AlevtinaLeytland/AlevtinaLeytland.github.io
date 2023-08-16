@@ -28,7 +28,9 @@ export default function Article({ article }) {
         ) : (
           <p className="text-article">{article.articleText}</p>
         )}
-        <button className="readMore-button">Read more</button>
+        <div className="btn-wrapper">
+          <button className="readMore-button">Read more</button>
+        </div>
       </div>
     </div>
   );

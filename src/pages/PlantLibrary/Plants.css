@@ -4,3 +4,23 @@
   grid-template-columns: 30% 70%;
   width: 100%;
 }
+.plant-item {
+}
+.all-plants {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5%;
+}
+@media only screen and (max-width: 768px) {
+  .plants-container {
+    display: block;
+    align-items: center;
+  }
+  .all-plants {
+    justify-content: center;
+  }
+  .sidebar {
+    display: flex;
+    justify-content: center;
+  }
+}

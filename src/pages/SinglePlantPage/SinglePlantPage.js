@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./SinglePlantPage.css";
 import { useParams } from "react-router-dom";
 import Plant from "../../components/Plant/Plant";
 import { findPlant } from "../../api/api";
@@ -26,7 +27,7 @@ export const SinglePlantPage = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="single-plant">
       {plant && <Plant plant={plant} />}
       {isLoading && <h1>Loading</h1>}
       {error && <h1>{error}</h1>}

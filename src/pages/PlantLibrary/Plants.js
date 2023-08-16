@@ -32,10 +32,12 @@ export default function Plants() {
       <Sidebar searchPlants={searchPlants} />
       {isLoading && <h1>Loading</h1>}
       {error && <h1>{error}</h1>}
-      {plants &&
-        plants.map((plant) => {
-          return <Plant plant={plant} />;
-        })}
+      <div className="all-plants">
+        {plants &&
+          plants.map((plant) => {
+            return <Plant plant={plant} />;
+          })}
+      </div>
     </div>
   );
 }

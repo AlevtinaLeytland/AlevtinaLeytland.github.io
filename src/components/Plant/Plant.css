@@ -1,0 +1,15 @@
+.plant-item {
+  align-items: center;
+}
+h3 {
+  text-align: center;
+  color: #4f3505;
+}
+
+.plant-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  align-content: center;
+  color: #4f3505;
+}

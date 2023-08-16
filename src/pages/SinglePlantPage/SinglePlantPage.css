@@ -1,0 +1,11 @@
+.single-plant .plant-item {
+  display: flex;
+}
+.item-description {
+}
+.item-img {
+  margin: 5%;
+}
+.main-section {
+  display: block;
+}
