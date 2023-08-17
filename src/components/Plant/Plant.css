@@ -5,6 +5,13 @@ h3 {
   text-align: center;
   color: #4f3505;
 }
+.plant-name {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 .plant-btn {
   display: flex;
@@ -12,4 +19,7 @@ h3 {
   margin-top: 5%;
   align-content: center;
   color: #4f3505;
+}
+.dummyPic {
+  width: 200px;
 }

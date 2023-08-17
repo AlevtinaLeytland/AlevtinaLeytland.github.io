@@ -33,11 +33,12 @@
 }
 .nav-menu a:hover {
   color: white;
-  font-size: calc(16px + 10 * (100vw / 1280));
+
+  /* font-size: calc(16px + 10 * (100vw / 1280)); */
 }
 .nav-menu li span:hover {
   color: white;
-  font-size: calc(16px + 10 * (100vw / 1280));
+  /* font-size: calc(16px + 10 * (100vw / 1280)); */
 }
 .permaculture-list {
   opacity: 0;

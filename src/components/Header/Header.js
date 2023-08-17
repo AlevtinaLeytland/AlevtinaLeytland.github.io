@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import banner from "../../Assets/banner.jpg";
+import { slide as Menu } from "react-burger-menu";
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Header() {
           <li>
             <Link to={"aboutUs"}>ABOUT US</Link>
           </li>
-          <li onClick={() => setOpen(!isOpen)}>
+          <li onClick={() => setOpen((prev) => !prev)}>
             <span>PERMACULTURE</span>
             <ul className={`permaculture-list ${isOpen ? "active" : ""}`}>
               <li>
