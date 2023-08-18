@@ -27,6 +27,9 @@ export default function Plants() {
   function searchPlants(query) {
     setQuery(query);
   }
+  const result = [1, 2, 3, 4].map((el) => {
+    console.log(el);
+  });
   return (
     <div className="plants-container">
       <Sidebar searchPlants={searchPlants} />
@@ -34,9 +37,13 @@ export default function Plants() {
       {error && <h1>{error}</h1>}
       <div className="all-plants">
         {plants &&
-          plants.map((plant) => {
-            return <Plant plant={plant} />;
-          })}
+          (plants.length > 0 ? (
+            plants.map((plant) => {
+              return <Plant plant={plant} />;
+            })
+          ) : (
+            <h1>Plant doesn't exist</h1>
+          ))}
       </div>
     </div>
   );

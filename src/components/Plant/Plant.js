@@ -6,11 +6,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Plant = ({ plant }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(location);
   return (
     <div className="plant-item">
       <div className="item-img">
         <h3 className="plant-name">{plant.common_name}</h3>
         {plant.default_image &&
+        plant.default_image.thumbnail &&
         plant.default_image.thumbnail !==
           "https://perenual.com/storage/image/upgrade_access.jpg" ? (
           <img src={plant.default_image.thumbnail} alt="plant" />
