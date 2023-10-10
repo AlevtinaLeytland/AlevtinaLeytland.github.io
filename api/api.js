@@ -1,6 +1,6 @@
-const newsKey = "91436f93d637403d88e7a6eda1dcc7fa";
+const newsKey = "9eb1b3319c9458b85a7dd71dfabab57a";
 const quoteUrl = "https://api.quotable.io";
-const baseUrlNews = "https://newsapi.org/v2/";
+const baseUrlNews = "https://gnews.io/api/v4/";
 
 //get random Quote function in sidebar
 export async function getRandomQuote() {
@@ -10,11 +10,7 @@ export async function getRandomQuote() {
 //get news by selecting country or category
 export async function getNewsBySelect(country, category) {
   const data = await fetch(
-    `${baseUrlNews}top-headlines?country=${country}&category=${category}`,
-
-    {
-      headers: { "X-Api-Key": newsKey },
-    },
+    `${baseUrlNews}top-headlines?country=${country}&category=${category}&apikey=${newsKey}`,
   );
   return await data.json();
 }
