@@ -3,7 +3,6 @@ import "./Article.css";
 
 export default function Article({ article }) {
   return (
-    // article.id ===3 ?
     <div className="article-wrapper">
       <div className="article-img">
         <img src={article.imageSrc} alt="" />

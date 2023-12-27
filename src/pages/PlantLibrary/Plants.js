@@ -27,9 +27,6 @@ export default function Plants() {
   function searchPlants(query) {
     setQuery(query);
   }
-  const result = [1, 2, 3, 4].map((el) => {
-    console.log(el);
-  });
   return (
     <div className="plants-container">
       <Sidebar searchPlants={searchPlants} />

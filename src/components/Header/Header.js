@@ -1,13 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import "./Header.css";
 import banner from "../../Assets/banner.jpg";
-import { slide as Menu } from "react-burger-menu";
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
-  const menuRef = useRef(null);
 
   return (
     <div>
@@ -17,7 +15,7 @@ export default function Header() {
           freedom. <br />
           <span className="quote-author">Bob Dylan</span>
         </div>
-        <img className="banner-img" src={banner} />
+        <img className="banner-img" src={banner} alt="banner" />
         <ul className="nav-menu">
           <li>
             <Link to={"/"}>HOME</Link>

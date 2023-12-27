@@ -15,7 +15,7 @@ function App() {
         <Route path="plantLibrary" element={<Plants />} />
         <Route path="plantLibrary/:id" element={<SinglePlantPage />} />
       </Route>
-      <Route path="*" element={<h1>404</h1>} />
+      <Route path="*" element={<h1>404 Page is not found</h1>} />
     </Routes>
   );
 }
